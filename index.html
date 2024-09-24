@@ -1,56 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jai shree shyam</title>
-    <link rel="icon" href="9.jpg" type="image/png">
-    <link rel="stylesheet" href="snew.css" />
-  </head>
-  <body>
-    <header>
-      <h1 id="top">shyam dham Saharwa</h1>
-    </header>
-    <hr />
-    <nav id="navbar">
-      <ul id="navcontent">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#photo">photo gallery</a></li>
-        <li><a href="donation.html">donation</a></li>
-      </ul>
-    </nav>
-    <div class="main">
-      <img src="14.jpg" alt="" id="Home" class="first" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jai Shree Shyam</title>
+  <link rel="icon" href="9.jpg" type="image/png">
+  <style>
+    /* Responsive Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 1rem;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    nav {
+      background-color: #333;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+
+    nav ul li a:hover {
+      background-color: #575757;
+      border-radius: 5px;
+    }
+
+    .main img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px 0;
+    }
+
+    .about {
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .about h2,
+    .about p {
+      text-align: center;
+      margin: 20px auto;
+      max-width: 900px;
+    }
+
+    /* Photo gallery */
+    #photo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin-bottom: 10px;
+      }
+    }
+
+    .dusra27 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .two980,
+    .two991 {
+      width: 100%;
+      max-width: 600px;
+      /* Maximum width for larger screens */
+      padding: 15px;
+      /* box-sizing: border-box; */
+    }
+
+    .two980 iframe {
+      width: 100%;
+      max-width: 100%;
+      height: 100vh;
+      /* Full height for desktop */
+    }
+
+    /* Responsive styling for tablets and smaller devices */
+    @media only screen and (max-width: 768px) {
+      .dusra27 {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    /* Additional styling for very small screens */
+    @media only screen and (max-width: 600px) {
+      .two980 iframe {
+        height: 300px;
+        /* Adjust height for small screens */
+      }
+
+    }
+    .two991 {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            margin-top: 10px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #333;
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Honeypot field hidden */
+        .hidden {
+            display: none;
+        }
+
+        /* Basic responsive layout for mobile */
+        @media (max-width: 600px) {
+            .two991 {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            input, textarea {
+                font-size: 14px;
+            }
+        }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="top">Shyam Dham Saharwa</h1>
+  </header>
+  <hr />
+  <nav id="navbar">
+    <ul id="navcontent">
+      <li><a href="#home">Home</a></li>
+      <li><a href="documentary.html">About</a></li>
+      <li><a href="#photo">Photo Gallery</a></li>
+      <li><a href="#contact">contact us</a></li>
+    </ul>
+  </nav>
+
+  <div class="main">
+    <img src="14.jpg" alt="Main Image" id="Home" class="first" />
+  </div>
+
+  <section class="about" id="about">
+    <h2>About</h2>
+    <p>
+      हिन्दू धर्म के अनुसार, खाटू श्याम जी ने द्वापरयुग में श्री कृष्ण से वरदान प्राप्त किया था कि वे कलयुग में उनके नाम
+      श्याम से पूजे जाएँगे। बर्बरीक जी का शीश खाटू नगर (वर्तमान राजस्थान राज्य के सीकर जिला) में दफ़नाया गया, इसलिए
+      उन्हें खाटू श्याम बाबा कहा जाता है। कथा के अनुसार, एक गाय उस स्थान पर आकर रोज अपने स्तनों से दुग्ध की धारा स्वतः
+      ही बहा रही थी। बाद में खुदाई के बाद वह शीश प्रकट हुआ। तदन्तर उस स्थान पर मन्दिर का निर्माण किया गया और कार्तिक माह
+      की एकादशी को शीश मन्दिर में सुशोभित किया गया।
+    </p>
+  </section>
+  <h2 style="text-align: center;">Photo Gallery</h2>
+  <section id="photo">
+    <img src="phog.jpg" alt="photo1" class="image-container" />
+    <img src="mainshy.jpg" alt="photo2" class="image-container" />
+    <img src="12.jpg" alt="photo3" class="image-container" />
+    <img src="13.jpg" alt="photo4" class="image-container" />
+    <img src="14.jpg" alt="photo5" class="image-container" />
+    <img src="15.jpg" alt="photo6" class="image-container" />
+    <img src="16.jpg" alt="photo7" class="image-container" />
+    <img src="17.jpg" alt="photo8" class="image-container" />
+  </section>
+
+  <footer>
+    <h1 style="text-align: center;">Reach to Us</h1>
+    <div class="dusra27" id="contact">
+      <div class="two980">
+        <h3 style="text-align: center;">shyam Dham location</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1746.0870376503067!2d75.73634235872193!3d28.92288180000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39124c989c813f83%3A0x67c215696b4fa451!2sShree%20Shyam%20Ji%20Saharwa%20Dham!5e0!3m2!1sen!2sin!4v1727182579438!5m2!1sen!2sin"
+          style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+      </div>
+      <div class="two991">
+        <h3 style="text-align: center;">Contact us</h3>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+          <!-- Replace with your Access Key -->
+          <input type="hidden" name="access_key" value="90e12738-fea4-45da-8b09-070a0283941d">
+
+          <!-- Form Inputs. Each input must have a name="" attribute -->
+          <input type="text" placeholder="Enter your name" name="name" required>
+          <input type="email" placeholder="Enter your Email" name="email" required>
+          <textarea name="message" placeholder="Enter your Message" required></textarea>
+
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+
+          <button type="submit">Submit Form</button>
+
+        </form>
+      </div>
     </div>
-    <div class="about" id="about">
-        <h2>about</h2>
-      <p>
-         हिन्दू धर्म के अनुसार, खाटू श्याम जी ने द्वापरयुग में श्री कृष्ण
-        से वरदान प्राप्त किया था कि वे कलयुग में उनके नाम श्याम से पूजे जाएँगे।
-        बर्बरीक जी का शीश खाटू नगर (वर्तमान राजस्थान राज्य के सीकर जिला) में
-        दफ़नाया गया इसलिए उन्हें खाटू श्याम बाबा कहा जाता है। कथा के अनुसार एक
-        गाय उस स्थान पर आकर रोज अपने स्तनों से दुग्ध की धारा स्वतः ही बहा रही
-        थी। बाद में खुदाई के बाद वह शीश प्रकट हुआ, जिसे कुछ दिनों के लिए एक
-        ब्राह्मण को सूपुर्द कर दिया गया। एक बार खाटू नगर के राजा को स्वप्न में
-        मन्दिर निर्माण के लिए और वह शीश मन्दिर में सुशोभित करने के लिए प्रेरित
-        किया गया। तदन्तर उस स्थान पर मन्दिर का निर्माण किया गया और कार्तिक माह
-        की एकादशी को शीश मन्दिर में सुशोभित किया गया, जिसे बाबा श्याम के जन्मदिन
-        के रूप में मनाया जाता है। मूल मंदिर 1027 ई. में रूपसिंह चौहान और उनकी
-        पत्नी नर्मदा कँवर द्वारा बनाया गया था।
-      </p>
-    </div>
-    <h2>photogallery</h2>
-    <div id="photo">
-        <img src="phog.jpg" alt="photo1" class="image-container">
-        <img src="mainshy.jpg" alt="photo7"class="image-container" >
-        <img src="12.jpg" alt="photo2" class="image-container">
-        <img src="13.jpg" alt="photo3" class="image-container">
-        <img src="14.jpg" alt="photo4"class="image-container" >
-        <img src="15.jpg" alt="photo5" class="image-container">
-        <img src="16.jpg" alt="photo6" class="image-container">
-        <img src="17.jpg" alt="photo7"class="image-container" >
-    </div>
-    <h2>jai shree shyam</h2>
-  </body>
+    <h2 style="text-align: center;">Jai Shree Shyam 🕉️</h2>
+  </footer>
+</body>
+
 </html>
