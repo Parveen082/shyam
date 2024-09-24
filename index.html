@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jai Shree Shyam</title>
   <link rel="icon" href="9.jpg" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <style>
-    /* Responsive Styles */
+    /* Global Styles */
     * {
       margin: 0;
       padding: 0;
@@ -16,7 +17,10 @@
 
     body {
       font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f0f0f0;
     }
+   
 
     header {
       text-align: center;
@@ -28,6 +32,7 @@
       color: #333;
     }
 
+    /* Navigation Styles */
     nav {
       background-color: #333;
     }
@@ -55,13 +60,15 @@
       border-radius: 5px;
     }
 
+    /* Main Image Styles */
     .main img {
       width: 100%;
-      height: auto;
+      height: 1050px;
       display: block;
       margin: 20px 0;
     }
 
+    /* About Section */
     .about {
       padding: 20px;
       background-color: #f9f9f9;
@@ -74,7 +81,7 @@
       max-width: 900px;
     }
 
-    /* Photo gallery */
+    /* Photo Gallery */
     #photo {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -87,8 +94,10 @@
       width: 100%;
       height: auto;
       border-radius: 5px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    /* Responsive Menu */
     @media (max-width: 768px) {
       nav ul {
         flex-direction: column;
@@ -99,115 +108,146 @@
       }
     }
 
+    /* Contact Section */
     .dusra27 {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      padding: 20px;
+      background-color: #f4f4f4;
     }
 
     .two980,
     .two991 {
       width: 100%;
       max-width: 600px;
-      /* Maximum width for larger screens */
       padding: 15px;
-      /* box-sizing: border-box; */
     }
 
     .two980 iframe {
       width: 100%;
-      max-width: 100%;
-      height: 100vh;
-      /* Full height for desktop */
+      height: 400px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
     }
 
-    /* Responsive styling for tablets and smaller devices */
-    @media only screen and (max-width: 768px) {
+    .two991 {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input,
+    textarea {
+      margin-top: 10px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #333;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Honeypot field hidden */
+    .hidden {
+      display: none;
+    }
+
+    /* Responsive styling for contact iframe */
+    @media (max-width: 768px) {
       .dusra27 {
         display: block;
         text-align: center;
       }
-    }
 
-    /* Additional styling for very small screens */
-    @media only screen and (max-width: 600px) {
       .two980 iframe {
         height: 300px;
-        /* Adjust height for small screens */
       }
 
+      input,
+      textarea {
+        font-size: 14px;
+      }
+
+      .two991 {
+        margin: 20px;
+        padding: 15px;
+      }
     }
-    .two991 {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
 
-        h3 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
+    footer {
+      padding: 20px;
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+    }
 
-        form {
-            display: flex;
-            flex-direction: column;
-        }
+    footer h2 {
+      margin-top: 20px;
+    }
+   
+  #photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Space between the cards */
+  }
 
-        input, textarea {
-            margin-top: 10px;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
+  .card {
+    width: 220px; /* Width of the card */
+    border: 1px solid #ddd; /* Light border around the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow for depth */
+    overflow: hidden; /* Prevents content from spilling out */
+    text-align: center; /* Centers the image and content inside the card */
+  }
 
-        input:focus, textarea:focus {
-            border-color: #333;
-            outline: none;
-        }
+  .card-image {
+    width: 100%; /* Make the image fill the card width */
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensure the image fits within the card without distortion */
+  }
 
-        textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        button {
-            padding: 12px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Honeypot field hidden */
-        .hidden {
-            display: none;
-        }
-
-        /* Basic responsive layout for mobile */
-        @media (max-width: 600px) {
-            .two991 {
-                margin: 20px;
-                padding: 15px;
-            }
-
-            input, textarea {
-                font-size: 14px;
-            }
-        }
   </style>
 </head>
 
@@ -221,37 +261,56 @@
       <li><a href="#home">Home</a></li>
       <li><a href="documentary.html">About</a></li>
       <li><a href="#photo">Photo Gallery</a></li>
-      <li><a href="#contact">contact us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
     </ul>
   </nav>
 
   <div class="main">
-    <img src="14.jpg" alt="Main Image" id="Home" class="first" />
+    <img src="main2.jpg" alt="Main Image" id="Home" class="first" />
   </div>
 
   <section class="about" id="about">
     <h2>About</h2>
     <p>
-      हिन्दू धर्म के अनुसार, खाटू श्याम जी ने द्वापरयुग में श्री कृष्ण से वरदान प्राप्त किया था कि वे कलयुग में उनके नाम
-      श्याम से पूजे जाएँगे। बर्बरीक जी का शीश खाटू नगर (वर्तमान राजस्थान राज्य के सीकर जिला) में दफ़नाया गया, इसलिए
-      उन्हें खाटू श्याम बाबा कहा जाता है। कथा के अनुसार, एक गाय उस स्थान पर आकर रोज अपने स्तनों से दुग्ध की धारा स्वतः
-      ही बहा रही थी। बाद में खुदाई के बाद वह शीश प्रकट हुआ। तदन्तर उस स्थान पर मन्दिर का निर्माण किया गया और कार्तिक माह
-      की एकादशी को शीश मन्दिर में सुशोभित किया गया।
+      हिन्दू धर्म के अनुसार, खाटू श्याम जी ने द्वापरयुग में श्री कृष्ण से वरदान प्राप्त किया था कि वे कलयुग में उनके नाम श्याम से पूजे जाएँगे। बर्बरीक जी का शीश खाटू नगर (वर्तमान राजस्थान राज्य के सीकर जिला) में दफ़नाया गया, इसलिए उन्हें खाटू श्याम बाबा कहा जाता है। कथा के अनुसार, एक गाय उस स्थान पर आकर रोज अपने स्तनों से दुग्ध की धारा स्वतः ही बहा रही थी। बाद में खुदाई के बाद वह शीश प्रकट हुआ। तदन्तर उस स्थान पर मन्दिर का निर्माण किया गया और कार्तिक माह की एकादशी को शीश मन्दिर में सुशोभित किया गया।
     </p>
   </section>
-  <h2 style="text-align: center;">Photo Gallery</h2>
-  <section id="photo">
-    <img src="phog.jpg" alt="photo1" class="image-container" />
-    <img src="mainshy.jpg" alt="photo2" class="image-container" />
-    <img src="12.jpg" alt="photo3" class="image-container" />
-    <img src="13.jpg" alt="photo4" class="image-container" />
-    <img src="14.jpg" alt="photo5" class="image-container" />
-    <img src="15.jpg" alt="photo6" class="image-container" />
-    <img src="16.jpg" alt="photo7" class="image-container" />
-    <img src="17.jpg" alt="photo8" class="image-container" />
-  </section>
 
-  <footer>
+
+
+  <h2 style="text-align: center;">Photo Gallery</h2>
+<section id="photo">
+  <div class="card">
+    <img src="phog.jpg" alt="photo1" class="card-image" style="height: 400px;" />
+  </div>
+  <div class="card">
+    <img src="mainshy.jpg" alt="photo2" class="card-image" style="height: 400px;" />
+  </div>
+  <div class="card">
+    <img src="12.jpg" alt="photo3" class="card-image" style="height: 400px;" />
+  </div>
+  <div class="card">
+    <img src="13.jpg" alt="photo4" class="card-image" style="height: 400px;"/>
+  </div>
+  <div class="card">
+    <img src="14.jpg" alt="photo5" class="card-image" style="height: 400px;" />
+  </div>
+  <div class="card">
+    <img src="15.jpg" alt="photo6" class="card-image" style="height: 400px;" />
+  </div>
+  <div class="card">
+    <img src="16.jpg" alt="photo7" class="card-image" style="height: 400px;" />
+  </div>
+  <div class="card">
+    <img src="17.jpg" alt="photo8" class="card-image" style="height: 400px;" />
+  </div>
+</section>
+
+
+
+
+
+  <footer></footer>
     <h1 style="text-align: center;">Reach to Us</h1>
     <div class="dusra27" id="contact">
       <div class="two980">
@@ -272,7 +331,7 @@
           <input type="hidden" name="access_key" value="90e12738-fea4-45da-8b09-070a0283941d">
 
           <!-- Form Inputs. Each input must have a name="" attribute -->
-         <input type="text" placeholder="Enter your name" name="name" >
+          <input type="text" placeholder="Enter your name" name="name" >
           <input type="email" placeholder="Enter your Email" name="email" >
           <textarea name="message" placeholder="Enter your Message" ></textarea>
 
